@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      gap: 20px;
+    }
+    canvas {
+      border: 1px solid white;
+    }
+    .controls {
+      color: white;
+      font-family: monospace;
+    }
+    input[type="range"] {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div class="controls">
+    <div>
+      <label>Rotation Y: <input type="range" id="rotY" min="0" max="360" value="45"></label>
+      <span id="rotYVal">45°</span>
+    </div>
+    <div>
+      <label>Rotation X: <input type="range" id="rotX" min="-90" max="90" value="0"></label>
+      <span id="rotXVal">0°</span>
+    </div>
+    <div>
+      <label>Camera Distance: <input type="range" id="camDist" min="2" max="10" step="0.1" value="4"></label>
+      <span id="camDistVal">4</span>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
